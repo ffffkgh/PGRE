@@ -1,0 +1,11 @@
+# PGRE
+# python run_t.py,test_micro.py
+# 结果在results中
+
+# pgds, nbrgs
+# python _pgds_info_rate.py, _nbrds_info_rate.py
+
+# 'D_HSEPM', 'HSEPM', 'DPGM', 'D_NGPPF', 'HGP_EPM'
+# 在yu_code的with_PRGE下
+# python take_main
+
