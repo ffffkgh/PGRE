@@ -91,21 +91,6 @@ data/ICEWS18/valid_sliced.txt
 data/ICEWS18/test_sliced.txt
 ```
 
-Each sliced temporal quadruple file follows the format:
-
-```text
-head_id relation_id tail_id time_id label
-```
-
-where `head_id` and `tail_id` denote entity indices, `relation_id` denotes the relation type, `time_id` denotes the temporal index, and `label` is the edge label or placeholder field.
-
-The current sliced datasets use the following settings:
-
-| Dataset | Number of Entities | Number of Selected Relations |
-|---|---:|---:|
-| GDELT | 500 | 8 |
-| ICEWS18 | 500 | 10 |
-| WIKI | 500 | 15 |
 
 ## Running PGRE Experiments
 
@@ -216,58 +201,7 @@ For count-model-based experiments, the scripts also report forecasting and smoot
 - Mean relative error
 - Negative log-likelihood
 
-## Reproducibility Notes
 
-Before running the experiments, please check the following points:
-
-1. The dataset files exist under the correct `data/DATASET_NAME/` directory.
-2. The output directory `load_model/` has been created.
-3. The dataset name and number of selected relations `R` are consistent.
-4. The scripts currently use in-file configuration rather than command-line arguments.
-5. For formal release, remove local IDE files, Python cache files, and compiled binaries that are not required for reproduction.
-
-Recommended `.gitignore` entries:
-
-```gitignore
-# Python cache
-__pycache__/
-*.py[cod]
-*.pyo
-
-# IDE files
-.idea/
-.vscode/
-
-# Virtual environments
-venv/
-.venv/
-env/
-
-# Runtime outputs
-load_model/
-results/
-*.log
-
-# Large data or checkpoints, if not intended for GitHub
-data/*/*.pth
-*.pt
-*.pth
-```
-
-## Citation
-
-If you find this repository useful, please consider citing our paper:
-
-```bibtex
-@inproceedings{fang2026pgre,
-  title     = {Poisson--Gamma Modeling of Inter-Relational Dependencies in Dynamic Knowledge Graphs},
-  author    = {Fang, Nan and others},
-  booktitle = {Proceedings of the Conference Name},
-  year      = {2026}
-}
-```
-
-Please update the citation information after the paper is formally accepted or published.
 
 ## Acknowledgements
 
